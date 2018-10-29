@@ -27,3 +27,5 @@ and this node is still locked.
 • YELLOW: node is locked and can be unlocked. ( isLocked && canBeUnlocked )
 • GREEN: node is unlocked already and thus cannot be unlocked. ( !isLocked &&
 !canBeUnlocked )
+
+6. screenshots of working project: https://github.com/ShradhaPandey/skill-tree-app/issues/1#issue-375043141
