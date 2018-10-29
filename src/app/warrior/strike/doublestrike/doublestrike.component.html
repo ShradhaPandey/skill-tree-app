@@ -1,0 +1,27 @@
+<div class="row">
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-5">
+            <div   class="list-group-item clearfix">
+        <a href="#" class="list-group-item-text"  [ngStyle]="{color : getBackgroundColor()}" (click)="onDetailClicked(isDetailedClicked)">{{doublestrikeInfo.name}}</a>    
+      </div>
+    </div>  
+        </div> 
+    </div>
+    <div class="row">
+            <div class="col-md-8 col-md-offset-5">
+            <div
+            [ngStyle]="{backgroundColor : getBackgroundColor()}" 
+        class="list-group-item clearfix"
+        *ngIf="isDetailedClicked==true">
+    <div class="pull-left">
+    <p class="list-group-item-text">name: {{doublestrikeInfo.name}}</p>
+    <p class="list-group-item-text">isLocked: {{doublestrikeInfo.isLocked}}</p>
+    <p class="list-group-item-text">canBeUnlocked: {{doublestrikeInfo.canBeUnlocked}}</p>
+    </div>   
+    <div class="pull-right">
+            <button class= "btn btn-primary" (click)="onUnlockClicked()" [disabled]="!(this.doublestrikeInfo.canBeUnlocked)">Unlock</button>
+           
+        </div> 
+    </div> </div>
+    </div>

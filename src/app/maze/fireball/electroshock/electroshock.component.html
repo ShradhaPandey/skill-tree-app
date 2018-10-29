@@ -1,0 +1,36 @@
+  <div class="row">
+      <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-5">
+              <div   class="list-group-item clearfix">
+                <a href="#" class="list-group-item-text" [ngStyle]="{color : getBackgroundColor()}" (click)="onDetailClicked(isDetailedClicked)">{{electroshockInfo.name}}</a>    
+              </div>
+            </div>
+  </div> 
+           
+            <div class="row">
+                <div class="col-md-4 col-md-offset-5">
+                  <div
+                  [ngStyle]="{backgroundColor : getBackgroundColor()}" 
+                class="list-group-item clearfix"
+                *ngIf="isDetailedClicked==true">
+            <div class="pull-left">
+            <p class="list-group-item-text">name: {{electroshockInfo.name}}</p>
+            <p class="list-group-item-text">isLocked: {{electroshockInfo.isLocked}}</p>
+            <p class="list-group-item-text">canBeUnlocked: {{electroshockInfo.canBeUnlocked}}</p>
+            </div>   
+            <div class="pull-right">
+                <button class= "btn btn-primary" (click)="onUnlockClicked()" [disabled] ="!(this.electroshockInfo.canBeUnlocked)">Unlock</button>
+               
+              </div> 
+            </div> </div>
+            
+            </div>
+            <div claa="row">
+                <div class="col-md-12">
+                        <app-thunderbolt  [thunderboltInfo]="thunderboltInfo"></app-thunderbolt>
+                        </div>
+                        
+                  </div> 
+      </div> 
+                </div>

@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+        <div class="list-group-item clearfix">
+            <a href="#" class="list-group-item-text" [ngStyle]="{color : getBackgroundColor()}" (click)="onDetailClicked(isDetailedClicked)">{{fireballInfo.name}}</a>    
+          </div>
+        </div>
+        </div>  
+       
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5">
+          
+            <div
+            [ngStyle]="{backgroundColor : getBackgroundColor()}"
+            class="list-group-item clearfix"
+            *ngIf="isDetailedClicked==true">
+        <div class="pull-left">
+        <p class="list-group-item-text">name: {{fireballInfo.name}}</p>
+        <p class="list-group-item-text">isLocked: {{fireballInfo.isLocked}}</p>
+        <p class="list-group-item-text">canBeUnlocked: {{fireballInfo.canBeUnlocked}}</p>
+        </div>   
+        <div class="pull-right">
+            <button class= "btn btn-primary" (click)="onUnlockClicked()" disabled *ngIf="!(this.fireballInfo.canBeUnlocked)">Unlock</button>
+            <button class= "btn btn-primary" (click)="onUnlockClicked()" *ngIf="this.fireballInfo.canBeUnlocked">Unlock</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+        <div class="row">
+            
+            <div class="col-md-6">
+                <app-electroshock [electroshockInfo]="electroshockInfo" ></app-electroshock>
+                </div>
+                <div class="col-md-6" >
+                <app-freeze [freezeInfo]="freezeInfo" ></app-freeze>
+                </div>
+          </div>
+        </div>
+    </div>
+
+    

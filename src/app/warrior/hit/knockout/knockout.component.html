@@ -1,0 +1,37 @@
+<div class="row">
+        <div class="col-md-12">
+    <div class="row">
+            <div class="col-md-5 col-md-offset-5">
+    <div   class="list-group-item clearfix">
+    <a href="#" class="list-group-item-text"  [ngStyle]="{color : getBackgroundColor()}" (click)="onDetailClicked(isDetailedClicked)">{{knockoutInfo.name}}</a>    
+      </div>
+    </div>
+    </div>  
+    
+    <div class="row">
+            <div class="col-md-5 col-md-offset-5">
+            <div
+            [ngStyle]="{backgroundColor : getBackgroundColor()}" 
+        class="list-group-item clearfix"
+        *ngIf="isDetailedClicked==true">
+    <div class="pull-left">
+    <p class="list-group-item-text">name: {{knockoutInfo.name}}</p>
+    <p class="list-group-item-text">isLocked: {{knockoutInfo.isLocked}}</p>
+    <p class="list-group-item-text">canBeUnlocked: {{knockoutInfo.canBeUnlocked}}</p>
+    </div>   
+    <div class="pull-right">
+            <button class= "btn btn-primary" (click)="onUnlockClicked()" [disabled]="!(this.knockoutInfo.canBeUnlocked)">Unlock</button>
+            
+        </div> 
+    </div> 
+</div>
+</div>
+    <div class="row">
+            <div class="col-md-12">
+        <app-roundhousekick [roundhousekickInfoFromKnockout]="roundhousekickInfoFromKnockout"></app-roundhousekick>
+            </div>
+            
+      </div>
+   
+</div>
+</div>
