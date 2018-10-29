@@ -29,3 +29,4 @@ and this node is still locked.
 !canBeUnlocked )
 
 6. screenshots of working project: https://github.com/ShradhaPandey/skill-tree-app/issues/1#issue-375043141
+7. screenshot of the skill trees to be implented: https://github.com/ShradhaPandey/skill-tree-app/issues/2#issue-375045027
