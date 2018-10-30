@@ -1,5 +1,5 @@
 import { Component,Output } from '@angular/core';
-import {NodeInfo} from '../NodeInfo.model';
+import {NodeInfo} from '../nodeProperties.model';
 @Component({
   selector: 'app-warrior',
   templateUrl: './warrior.component.html',
