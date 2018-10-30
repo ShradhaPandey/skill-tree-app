@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { NodeInfo } from '../../../../NodeInfo.model';
+import { NodeInfo } from '../../../../nodeProperties.model';
 @Component({
   selector: 'app-thunderbolt',
   templateUrl: './thunderbolt.component.html',
