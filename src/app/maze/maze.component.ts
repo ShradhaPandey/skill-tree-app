@@ -1,5 +1,5 @@
 import { Component, Output, Input } from '@angular/core';
-import {NodeInfo} from '../NodeInfo.model';
+import {NodeInfo} from '../nodeProperties.model';
 @Component({
   selector: 'app-maze',
   templateUrl: './maze.component.html',
