@@ -1,5 +1,5 @@
 import { Component,Input,OnInit } from '@angular/core';
-import {NodeInfo} from '../../NodeInfo.model';
+import {NodeInfo} from '../../nodeProperties.model';
 @Component({
   selector: 'app-roundhousekick',
   templateUrl: './roundhousekick.component.html',
