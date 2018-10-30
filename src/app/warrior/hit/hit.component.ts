@@ -1,5 +1,5 @@
 import { Component,Input, Output } from '@angular/core';
-import {NodeInfo} from '../../NodeInfo.model';
+import {NodeInfo} from '../../nodeProperties.model';
 @Component({
   selector: 'app-hit',
   templateUrl: './hit.component.html',
